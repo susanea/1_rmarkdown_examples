@@ -77,8 +77,7 @@ q_xts <- xts(q$q, order.by = q$Date)
 
 
 dygraph(q_xts) %>%
-  dyAxis("y", label = "Discharge (cfs)") %>%
-  dyOptions(drawPoints = TRUE, pointSize = 2)
+  dyAxis("y", label = "Discharge (cfs)") 
   
 ```
 
@@ -118,14 +117,23 @@ todays date, not just a static date you enter.
 `revealjs` package. Add link to your original report-style document. 
 
 
+##Dygraph example
+
+```{r}
+q_xts <- xts(q$q, order.by = q$Date)
 
 
-## DyGraph example. 
+dygraph(q_xts) %>%
+  dyAxis("y", label = "Discharge (cfs)") %>%
+  dyOptions(drawPoints = TRUE, pointSize = 2)
+```
+
+
 
 
 ## Poudre Paragraph
 
-The Poudre River is divided into three main sections; upper, middle and lower. **These sections can broadly be described as the High Elevation Mountain Stream, The Urban Transition Zone, and the Lower Prairie Zone.** The different characteristics of the zones in the river impact the fish wildlife found there. The Upper zone, dominated by snowmelt and runoff, has a higher velocity, and Brown Trout are the dominant species here. The Lower Zone is less confined by bedrock and has a lower velocity which results in a meandering stream with finer sediment.The dominant species in this region are the Fathead Minnow, Red Shiner, Creek Chub, and other small native species. The Urban Transition Zone is an interesting area in the river because *it exhibits characteristics from both the Upper and Lower Reaches*. The transition zone through Fort Collins also has some obstacles the smaller fish mush face such as channelization and diversions. These are not the only stressors in the Poudre on the fish community; *other stressors include soot and debris from wildfires, changes in flow, and changes in waater temperature due to irrigation and climate change*. 
+The Poudre River is divided into three main sections; upper, middle and lower. **These sections can broadly be described as the High Elevation Mountain Stream, The Urban Transition Zone, and the Lower Prairie Zone**. The different characteristics of the zones in the river impact the fish wildlife found there. The Upper zone, dominated by snowmelt and runoff, has a higher velocity, and Brown Trout are the dominant species here. The Lower Zone is less confined by bedrock and has a lower velocity which results in a meandering stream with finer sediment.The dominant species in this region are the Fathead Minnow, Red Shiner, Creek Chub, and other small native species. The Urban Transition Zone is an interesting area in the river because *it exhibits characteristics from both the Upper and Lower Reaches*. The transition zone through Fort Collins also has some obstacles the smaller fish mush face such as channelization and diversions. These are not the only stressors in the Poudre on the fish community; *other stressors include soot and debris from wildfires, changes in flow, and changes in water temperature due to irrigation and climate change*. 
 
 
 
